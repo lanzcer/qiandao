@@ -111,7 +111,7 @@ def get_info(cookie):
     try:
         if result['code'] == 0:
             print(f"当前账号：{result['data']['email']} ，剩余天数：{float(result['data']['leftDays'])}天")
-            msg.append(result['data']['email'] +" , 剩余天数：" + float(result['data']['leftDays']))
+            msg.append(result['data']['email'] +" , 剩余天数：" + str(float(result['data']['leftDays'])))
         else:
             print("cookie失效")
             msg.append("cookie失效")
@@ -140,7 +140,7 @@ def task(cookie):
     try:
         if result['code'] == 0:
             print(f"{result['message']} ，剩余天数：{float(result['list']['balance'])}天")
-            msg.append(result['message']+ " ，剩余天数："+float(result['list']['balance']))
+            msg.append(result['message']+ " ，剩余天数："+str(float(result['list']['balance'])))
         else:
             print(f"{result['message']},省省吧，别鸡儿一直签了")
             msg.append(result['message']+",省省吧，别鸡儿一直签了")
