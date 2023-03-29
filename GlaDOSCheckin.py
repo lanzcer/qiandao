@@ -152,8 +152,8 @@ if __name__ == '__main__':
     msg = ''
     cookies = get_cookie()[0]
     for ck in cookies:
-        msg += get_info(ck)
-        msg += task(ck)
+         get_info(ck)
+         task(ck)
     msg += "\n"+"时间："+time.strftime('%Y-%m-%d %H:%M:%S',time.localtime(time.time()))
     send("GlaDos签到通知",msg)
 
